@@ -1,0 +1,52 @@
+
+.searchBoxDiv {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Adjust the z-index to ensure it's above other elements */
+}
+
+.search {
+  position: relative; /* Change to relative */
+  top: 75%;
+  background-color: rgba(192, 198, 181, 0.5);
+  padding: 20px 10px 20px 20px;
+  width: 80%;
+  border-radius: 12px;
+  height: 20%;
+  margin-top: 20px;
+  justify-content: space-between; 
+  gap: 10%;
+}
+.yourSpace{
+  color: rgb(88, 80, 80);
+  background-color: #ffffff;
+  border: none;
+  letter-spacing: 0.05em;
+  width: 100%;
+margin: 5px 20px 20px 0 ;
+
+
+}
+.KeyOptions {
+  color: rgb(88, 80, 80);
+  background-color: #b84747;
+  border: none;
+  letter-spacing: 0.05em;
+ padding: 20px;
+ margin: 20px;
+ width: 80%;
+
+  
+}
+.clickme{
+  background-color: rgb(66, 65, 65, 0.89);
+  color: bisque;
+  border: navajowhite;
+  letter-spacing:0.03em ;
+  border-radius: 20px;
+  height: 40px;
+  margin-top: 25px;
+  margin:  30px ;
+}

@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import axios from 'axios';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
+
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import './style.css';
-
-// import required modules
+import axios from "axios";
+import "swiper/swiper-bundle.css"; 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import SearchBox from "./SearchBox/SearchBox";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-export default function Banner() {
-    const [banners, setBanners] = useState([]);
+export default function LandingPage() {
+  const [banners, setBanners] = useState([]);
 
   useEffect(() => {
     const apiKey = "QsuyoIt7t8R5fy6u8jRD97gt47G8HV5ZE6R76FGs87gtr";
@@ -36,19 +37,19 @@ export default function Banner() {
 
     fetchData();
   }, []);
+
   return (
-    <>
+    <div className="landing-page-container">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-       
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
@@ -56,21 +57,25 @@ export default function Banner() {
           <SwiperSlide key={index}>
             <div className="banner">
               <img src={banner.image} alt={banner.title} />
-              
+              <div className='title'>
+                <h2>{banner.title}</h2>
+              </div>
             </div>
-            <div className='title'>
-            <h2 >{banner.title}</h2>
+
+            <div className='button'>
+              <button className="btnExplore">Explore</button>
             </div>
-            
-            <button>
-  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Explore me
-</button> 
-            
-            
           </SwiperSlide>
         ))}
-       
       </Swiper>
-    </>
+
+      <div className="searchBoxDiv">
+        
+      
+        <SearchBox />
+        
+      </div>
+    </div>
   );
 }
+

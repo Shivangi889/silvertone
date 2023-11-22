@@ -1,0 +1,223 @@
+
+
+.mainbg{
+  padding: 80px 0px !important;
+  background-color: #F7F7F7;
+}
+.section {
+  display: block;
+}
+
+.about-sec {
+  padding-top: 100px;
+  padding-bottom: 90px;
+  border-radius: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  box-sizing: border-box;
+    
+  }
+  .container{
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+/* .row{
+  
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+} */
+/* .row>*{
+  flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+} */
+
+.column-md-6{
+  visibility: visible;
+  animation-delay: 500ms;
+  animation-name: fadeInRight;
+  flex: 0 0 auto;
+    width: 50%;
+}  
+
+.mb30{
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  font-family: 'Gilroy-Regular';
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--headings-color);
+    line-height: 26px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+.text-capitalize{
+  text-transform: capitalize;
+  font-size: 36px;
+  line-height: 1.5;
+  color: var(--headings-color);
+  margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+h4.sub-title {
+  font-size: 27px;
+  color: #000;
+}
+.why-chose-list{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.about-sec p {
+  font-size: 18px !important;
+  line-height: 25px;
+  font-weight: 500;
+  visibility: visible;
+}
+p{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+  margin: 0 0 15px 0;
+    color: var(--headings-color);
+}
+.list-one{
+  display: flex;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.why-chose-list.style2 .list-icon {
+  color: var(--headings-color);
+}
+
+.why-chose-list .list-one .list-icon {
+  background-color: rgba(235, 103, 83, 0.07);
+  border-radius: 50%;
+  color: #EB6753;
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  line-height: 80px;
+  text-align: center;
+  width: 30px;
+  transition: all 0.4s ease;
+}
+.flex-shrink-0 {
+  flex-shrink: 0!important;
+}
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1!important;
+}
+
+mb-1 {
+  margin-bottom: 0.25rem!important;
+}
+
+.h6, h6 {
+  font-size: 15px;
+}
+.about-sec p {
+  font-size: 18px !important;
+  line-height: 25px;
+  font-weight: 500;
+}
+.text {
+  color: var(--headings-color);
+  font-family: var(--title-font-family);
+  font-weight: 400;
+  margin-bottom: 0!important;
+}
+
+p {
+  margin: 0 0 15px 0;
+  /* color: var(--headings-color);
+  line-height: 1.85;
+  font-weight: 400; */
+}
+
+:active a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+
+.ud-btn {
+  border-radius: 12px;
+  display: inline-block;
+  font-family: var(--title-font-family);
+  font-weight: 600;
+  font-size: 15px;
+  font-style: normal;
+  letter-spacing: 0em;
+  padding: 13px 30px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+:hover .ud-btn{
+  text-decoration: none;
+  color: #e7ab05;
+}
+.fal{
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+}
+
+/* image css */
+.cta-banner3:before {
+  background-image: url(../../images/estateBanner.jpg);
+  background-size: 90%;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 90%;
+  width: 42%;
+  padding: 10px 10px 30px 20px;
+  background-repeat: no-repeat;
+  border-radius: 8px 8px 8px 8px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+/* .btn-dark {
+  background-color: var(--headings-color);
+  border: 1px solid var(--headings-color);
+  color: #ffffff;
+} */
+
+/* @media only screen and (min-width: 768px) and (max-width: 1366px) .ud-btn {
+    padding: 5px 30px !important;
+} */

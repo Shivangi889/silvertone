@@ -1,0 +1,125 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: transparent; 
+  
+    z-index: 100;
+    /* transition: background-color 0.3s ease-in-out;  */
+  }
+  .navbar img {
+    display: flex;
+padding: 5px 10px 5px 20px ;
+align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+ right: 10px ;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .navbar-link {
+    color: #f8f5f5;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 10px;
+  
+    &:hover {
+      color: #d99d16;
+      text-decoration: wavy;
+    
+    }
+  }
+  .navbar.solid-color {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  .hamburger-icon {
+    display: none;
+  }
+
+  .solid-color {
+   
+    color: black;
+  }
+  .properties-link{
+    color: rgb(247, 243, 243);
+  }
+  .solid-color .properties-link{
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-link {
+      display: none;
+    }
+  
+    .hamburger-icon {
+      display: block;
+    }
+  }
+  
+  .navbar.solid-color {
+    background-color: #ffffff;
+  }
+  
+
+/* Dropdown styles */
+.properties-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(163, 157, 157);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  max-height: 200px; /* Adjust the value to control the maximum height of the dropdown */
+  /* If the content varies in height, you can set max-height to a large value, e.g., 1000px, to accommodate all content. */
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+/* Additional styles as needed */
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.dropPro{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+ 

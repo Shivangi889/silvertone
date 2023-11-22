@@ -1,67 +1,106 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
 
-#app {
-  height: 100%;
-}
-html,
-body {
-
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
 
 .swiper {
   width: 100%;
   height: 100%;
+  position: absolute; 
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+.searchBoxDiv {
+  position: absolute;
+top:0;
+width: 85%;
+margin: 450px 200px 200px 200px ;
 
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 999; 
+ 
 }
 
-.swiper-slide img {
-  display: block;
+.banner {
+  position: relative;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 90vh;
 }
-.banner{
-position: relative;
-width: 100%;
-height: 50%;
-}  
-.title{
-position: absolute;
-color: #ffffff;
-font-size: 25px;
-line-height: 40px;
-font-family: 'Montserrat','sans-serif';
 
+.title h2 {
+  position: absolute;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 40px;
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 59%;
+}
+
+.btnExplore {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+ }
+ 
+ .btnExplore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btnExplore:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+.btnExplore::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+  background-color: #fff;
+}
+
+.btnExplore:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .searchBoxDiv {
+    margin: 20% 90% 10% 20%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .searchBoxDiv {
+    margin: 5% 1%;
+  }
+
+  .title h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .btnExplore {
+    font-size: 15px;
+  }
 }
