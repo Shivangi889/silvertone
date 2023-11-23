@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import SearchStyle from './Search.module.css';
 import axios from 'axios';
 import {  Link, useNavigate } from 'react-router-dom';
+
+
 
 const apiKey = "QsuyoIt7t8R5fy6u8jRD97gt47G8HV5ZE6R76FGs87gtr";
 
@@ -11,7 +12,7 @@ const SearchBox = () => {
   const [type, setType] = useState('');
   const [location, setLocation] = useState('');
   const navigate =  useNavigate (); 
-
+ 
   const handleSearch = async () => {
     try {
       const response = await axios.post(
@@ -30,7 +31,8 @@ const SearchBox = () => {
 
       // Handle the response data as needed
       console.log(response.data);
-      navigate(`/property-lists/${type.toLowerCase()}`);
+      navigate(`/property-lists/${type.toLowerCase()}?search_keyword=${searchTerm}&type=${type}&location=${location}`);
+
     } catch (error) {
       // Handle errors
       console.error('Error fetching data:', error);
@@ -65,61 +67,61 @@ const SearchBox = () => {
               </button>
               <div className="dropdown-menu">
               
-                <a
+                <Link
                   className="dropdown-item"
                   href="#"
                   onClick={() => setType('Flats')}
                 >
                   Flats
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
                   href="#"
                   onClick={() => setType('Plots')}
                 >
                   Plots
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
                   href="#"
                   onClick={() => setType('Villas')}
                 >
                   Villas
-                </a>
-                <a
+                </Link>
+                <Link
                   className="dropdown-item"
                   href="#"
                   onClick={() => setType('Luxury Projects')}
                 >
                   Luxury Projects
-                </a>
-                <a
+                </Link>
+               <Link
                   className="dropdown-item"
                   href="#"
                   onClick={() => setType('Ready To Move In')}
                 >
                   Ready To Move In
-                </a>
-                <a
+               </Link>
+               <Link
                   className="dropdown-item"
-                  href="#"
+                  to=""
                   onClick={() => setType('Luxury Flats')}
                 >
                   Luxury Flats
-                </a>
-                <a
+               </Link>
+                <Link
                   className="dropdown-item"
-                  href="#"
+                  to=""
                   onClick={() => setType('Affordable Projects')}
                 >
                  Affordable Projects
-                </a>  <a
+                </Link>  <Link
                   className="dropdown-item"
-                  href="#"
+                  to=""
                   onClick={() => setType('Commercial Plots')}
                 >
                  Commercial Plots
-                </a>
+                </Link>
                
               </div>
             </div>
@@ -136,33 +138,33 @@ const SearchBox = () => {
               </button>
               <div className="dropdown-menu">
                 {/* Add onClick handlers to set the location state */}
-                <a
+               <Link
                   className="dropdown-item"
-                  href="#"
+                  to=""
                   onClick={() => setLocation('132032- Gurgaon')}
                 >
                   132032- Gurgaon
-                </a>
-                <a
+                </Link>
+               <Link
                   className="dropdown-item"
-                  href="#"
+                 to=""
                   onClick={() => setLocation('131679-Delhi')}
                 >131679-Delhi
-                </a>
-                <a
+                </Link>
+               <Link
                   className="dropdown-item"
-                  href="#"
+                 to=""
                   onClick={() => setLocation(' 133230-Nodia')}
                 >
                  133230-Nodia
-                </a>
-                <a
+             </Link>
+               <Link
                   className="dropdown-item"
-                  href="#"
+                to=""
                   onClick={() => setLocation('132032- Gurgaon')}
                 >
-                 132005-Greater Noida
-                </a>
+                 Greater Noida
+             </Link>
               </div>
 
 
@@ -170,12 +172,13 @@ const SearchBox = () => {
             </div>
          
           </div>
-          <Link to={`/property-lists/${type.toLowerCase()}`} className={SearchStyle.searchLink} >
-          <button
+          <Link to={`/property-lists/${type.toLowerCase()}?search_keyword=${searchTerm}&type=${type}&location=${location}`} className={SearchStyle.searchLink}>
+     <button
           type="button"
           className={`btn ${SearchStyle['clickme']}`}
           onClick={handleSearch}
         >
+          
           Search
         </button>
         </Link>
@@ -186,5 +189,4 @@ const SearchBox = () => {
     </div>
   );
 };
-
 export default SearchBox;

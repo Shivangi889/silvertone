@@ -1,15 +1,20 @@
-import React from 'react'
+import { lazy ,Suspense} from 'react'
+
 import Navbar from '../Navbar/Navbar'
-import Banner from './Banner'
 
 
+const Banner= lazy(() => import('./Banner'));
 
 const Landingpage = () => {
+ 
   return (
     <div>
       <Navbar/>
-    <Banner/>
    
+    <Suspense fallback={<div>.....</div>}>
+    <Banner />
+ 
+ </Suspense>
    
     </div>
   )

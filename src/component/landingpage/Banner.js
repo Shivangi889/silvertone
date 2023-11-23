@@ -10,11 +10,12 @@ import axios from "axios";
 import "swiper/swiper-bundle.css"; 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import SearchBox from "./SearchBox/SearchBox";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   const [banners, setBanners] = useState([]);
+ 
 
   useEffect(() => {
     const apiKey = "QsuyoIt7t8R5fy6u8jRD97gt47G8HV5ZE6R76FGs87gtr";

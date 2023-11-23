@@ -12,7 +12,7 @@ import Footer1 from './Footer/Footer1';
 
 const Home = () => {
     return (
-        <div>
+        <>
 
             <Landingpage />
             <LatestProperties />
@@ -23,7 +23,7 @@ const Home = () => {
 
            <Footer1/> 
 
-        </div>
+        </>
     )
 }
 

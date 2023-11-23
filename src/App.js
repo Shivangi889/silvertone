@@ -24,15 +24,13 @@ function App() {
         <Route path="/residential" element={<Residential/>} />
         <Route path="/developers" element={<Developers />} />
         <Route path="/contact" element={<Contact/>} />
-        {/* <Route path="/searchlist" element={<SearchBox/>} /> */}
-        {/* <Route path="/property-lists/:type" element={<Residential />} /> */}
-        
-
+       
        
         <Route path="/search" element={<SearchBox />} />
-        <Route path="/property-lists/:type" element={<SearchResults />} />
+        
        
-      
+        <Route path="/property-lists/:type" element={<SearchResults />} />
+
    
 
 
